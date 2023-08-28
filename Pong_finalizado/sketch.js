@@ -105,21 +105,37 @@ function mostraRaquetes(){
 function movimentaPlayOne(){
 //para 'w'codigo 87
   if(keyIsDown(SHIFT)){
-    yPlayOne -= 6;
+    if(yPlayOne < 0){
+      yPlayOne =0;
+    }else {
+      yPlayOne -= 6;
+    }
   }
 //para 's' codigo 83
   if(keyIsDown(CONTROL)) {
-    yPlayOne += 6;
+    if(yPlayOne > 330){
+      yPlayOne = 330;
+    }else {
+      yPlayOne += 6;
+    }
   }
 }
 
 //Movimenta a raquete PlayTwo
 function movimentaPlayTwo(){
   if(keyIsDown(UP_ARROW)) {
-    yPlayTwo -= 6;
+    if(yPlayTwo < 0){
+      yPlayTwo = 0;
+    }else {
+      yPlayTwo -= 6;
+    }
   }
   if(keyIsDown(DOWN_ARROW)) {
-    yPlayTwo += 6;
+    if(yPlayTwo > 330){
+      yPlayTwo = 330;
+    }else {
+      yPlayTwo += 6;
+    }
   }
 }
 
